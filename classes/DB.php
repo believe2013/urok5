@@ -26,4 +26,12 @@ class DB
         return $sth->fetchAll(PDO::FETCH_CLASS, $this->className);
     }
 
+    public function execute($sql, $params = [])
+    {
+        //Подготовка запроса
+        $sth = $this->dbh->prepare($sql);
+        //Выполнение запроса с подстановкой
+        return $sth->execute($params);
+    }
+
 }

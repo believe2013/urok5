@@ -5,10 +5,11 @@ class NewsController
 	public function actionAll()
 	{
 
-        var_dump(
-            NewsModel::findAll()
-        );
-        die;
+      /* $art = new NewsModel;
+        $art->name = 'Привет2';
+        $art->phone = 'Привет мир2';
+        $art->insert();
+        die;*/
 	}
 	public function actionOne()
 	{
