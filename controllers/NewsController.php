@@ -4,18 +4,11 @@ class NewsController
 {
 	public function actionAll()
 	{
-        $db = new DB();
-        $res = $db->query('SELECT * FROM callback WHERE id=:id', [':id' => 2]);
-        var_dump($res);
-        die;
-        /*
-		$news_all = News::getAll();
 
-		$view = new View();
-		
-		$view->items = $news_all;
-		$view->display('news/all.php');
-        */
+        var_dump(
+            NewsModel::findAll()
+        );
+        die;
 	}
 	public function actionOne()
 	{
