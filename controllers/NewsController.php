@@ -5,12 +5,11 @@ class NewsController
 	public function actionAll()
 	{
 
-      /* $art = new NewsModel;
-        $art->name = 'Привет2';
-        $art->phone = 'Привет мир2';
-        $art->insert();
-        die;*/
+        $art = NewsModel::findOneByColumn('name', 'Прррр');
+        $art->name = 'Прррр 222';
+        $art->save();
 	}
+
 	public function actionOne()
 	{
 		$id = $_GET['id'];
@@ -23,4 +22,6 @@ class NewsController
 
 		//include __DIR__.'/../views/news/one.php';
 	}
+
+
 }
