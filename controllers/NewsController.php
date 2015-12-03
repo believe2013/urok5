@@ -5,9 +5,7 @@ class NewsController
 	public function actionAll()
 	{
 
-        $art = NewsModel::findOneByColumn('name', 'Прррр');
-        $art->name = 'Прррр 222';
-        $art->save();
+        $art = NewsModel::findOneByColumn('name', 'Сегодняd');
 	}
 
 	public function actionOne()
